@@ -1,6 +1,6 @@
-package com.brianbig.shipping;
+package com.brianbig.flexy.shipping;
 
-import com.brianbig.mailing.MailSimulator;
+import com.brianbig.flexy.mailing.MailSimulator;
 
 
 public class ShippingSimulator implements ShippingListener {

@@ -1,4 +1,4 @@
-package com.brianbig.shipping;
+package com.brianbig.flexy.shipping;
 
 public interface ShippingListener {
 

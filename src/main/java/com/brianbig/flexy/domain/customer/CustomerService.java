@@ -1,10 +1,9 @@
-package com.brianbig.domain.customer;
+package com.brianbig.flexy.domain.customer;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 @AllArgsConstructor
@@ -14,10 +13,13 @@ public class CustomerService {
         return repository.findAll();
     }
 
-    public Customer registerCustomer(String name, String email){
+    public Customer registerCustomer(Customer customer){
+        Customer customerWithEmail = repository.findByEmail(customer.getEmail());
+        if (customerWithEmail != null)
+            return customerWithEmail;
         return repository.save(
                 Customer.builder()
-                        .email(email)
+                        .email(customer.getEmail())
                         .build()
         );
     }

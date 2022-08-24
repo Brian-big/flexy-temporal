@@ -1,4 +1,4 @@
-package com.brianbig.domain.orders;
+package com.brianbig.flexy.domain.orders;
 
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +20,13 @@ public class OrderService {
     public Order makeOrder(Order order){
         Order order_ =  Order.builder()
                 .customer(order.getCustomer())
-                .products(order.getProducts())
+                .product(order.getProduct())
                 .build();
         return repository.save(order_);
+    }
+
+    public Order getOrderById(long id){
+        return repository.findById(id).orElse(null);
     }
 
     @Transactional

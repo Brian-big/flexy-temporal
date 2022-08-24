@@ -1,4 +1,4 @@
-package com.brianbig.domain.products;
+package com.brianbig.flexy.domain.products;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

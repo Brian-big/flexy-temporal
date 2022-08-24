@@ -1,7 +1,7 @@
-package com.brianbig.domain.orders;
+package com.brianbig.flexy.domain.orders;
 
-import com.brianbig.domain.customer.Customer;
-import com.brianbig.domain.products.Product;
+import com.brianbig.flexy.domain.customer.Customer;
+import com.brianbig.flexy.domain.products.Product;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "order")
+@Table(name = "\"order\"")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "order_seq")
@@ -24,21 +24,10 @@ public class Order {
     @OneToOne
     private Customer customer;
 
-    @OneToMany
-    private List<Product> products;
+    @OneToOne
+    private Product product;
 
     @Column
     private String shipmentStatus;
 
-    @Transient
-    private double total;
-
-    public double getTotal() {
-        double total_ = 0.0;
-        for (Product p :
-                products) {
-            total += p.getPrice();
-        }
-        return total_;
-    }
 }

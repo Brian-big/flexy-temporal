@@ -1,4 +1,4 @@
-package com.brianbig.domain.customer;
+package com.brianbig.flexy.domain.customer;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

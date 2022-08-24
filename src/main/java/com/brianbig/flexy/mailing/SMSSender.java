@@ -1,4 +1,4 @@
-package com.brianbig.mailing;
+package com.brianbig.flexy.mailing;
 
 
 public class SMSSender extends MailSimulator{

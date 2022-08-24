@@ -1,4 +1,4 @@
-package com.brianbig.mailing;
+package com.brianbig.flexy.mailing;
 
 abstract public class MailSimulator {
     public abstract String getRecipientAddress();

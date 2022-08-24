@@ -1,10 +1,11 @@
-package com.brianbig.mailing;
+package com.brianbig.flexy.mailing;
 
 public class EmailSender extends MailSimulator {
-    private final String email;
-    public EmailSender(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
+
+    private  String email;
 
     @Override
     public String getRecipientAddress() {

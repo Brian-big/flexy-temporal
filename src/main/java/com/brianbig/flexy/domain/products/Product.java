@@ -1,4 +1,4 @@
-package com.brianbig.domain.products;
+package com.brianbig.flexy.domain.products;
 
 import lombok.*;
 
@@ -18,6 +18,6 @@ public class Product {
     private String name;
     @Column
     private String imageUrl;
-    @Column(columnDefinition = "Decimal(5.2) default '1.00'")
-    private double price;
+    @Column
+    private double price = 1.0;
 }

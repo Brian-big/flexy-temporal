@@ -1,10 +1,12 @@
-package com.brianbig.domain.products;
+package com.brianbig.flexy.domain.products;
 
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 @AllArgsConstructor
 public class ProductsService {
     @Autowired ProductRepository repository;
@@ -17,7 +19,7 @@ public class ProductsService {
         return repository.findById(id).orElse(null);
     }
 
-    private Product add(Product product){
+    public Product add(Product product){
         return repository.save(product);
     }
 }
