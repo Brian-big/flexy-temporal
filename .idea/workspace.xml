@@ -5,36 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f78a612-ed3d-428e-903e-83dd0844a957" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/FlexyWebApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/orders/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/products/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderActivityInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorkflow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorkflowInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/Shared.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/SpringFoxConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/domain/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/domain/customer/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/domain/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/domain/orders/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/orders/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/domain/orders/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/orders/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/domain/orders/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/orders/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/domain/products/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/products/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/domain/products/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/products/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/domain/products/ProductsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/products/ProductsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/mailing/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/mailing/EmailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/mailing/MailSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/mailing/MailSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/mailing/SMSSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/mailing/SMSSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/shipping/ShipExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/shipping/ShipExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/shipping/ShippingListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/shipping/ShippingListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/shipping/ShippingSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/shipping/ShippingSimulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/FlexyWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/FlexyWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +75,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.brianbig.flexy" />
       <recent name="com.brianbig.domain.customer" />
     </key>
   </component>
