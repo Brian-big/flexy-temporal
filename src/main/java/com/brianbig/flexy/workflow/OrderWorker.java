@@ -1,5 +1,7 @@
 package com.brianbig.flexy.workflow;
 
+import com.brianbig.flexy.workflow.order_process.OrderActivityImpl;
+import com.brianbig.flexy.workflow.shipping_process.ShippingActivityImpl;
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
 import io.temporal.common.RetryOptions;
@@ -15,7 +17,7 @@ public class OrderWorker {
         WorkerFactory workerFactory = WorkerFactory.newInstance(client);
         Worker worker = workerFactory.newWorker(Shared.TASK_QUEUE);
         worker.registerWorkflowImplementationTypes(OrderWorkflow.class);
-        worker.registerActivitiesImplementations(new OrderActivity());
+        worker.registerActivitiesImplementations(new OrderActivityImpl(), new ShippingActivityImpl());
         workerFactory.start();
     }
 

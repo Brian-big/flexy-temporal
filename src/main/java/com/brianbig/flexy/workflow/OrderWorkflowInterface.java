@@ -5,6 +5,8 @@ import io.temporal.workflow.QueryMethod;
 import io.temporal.workflow.WorkflowInterface;
 import io.temporal.workflow.WorkflowMethod;
 
+import javax.annotation.Nullable;
+
 @WorkflowInterface
 public interface OrderWorkflowInterface {
 
@@ -12,14 +14,18 @@ public interface OrderWorkflowInterface {
     Order makeOrder(Order order);
 
     @QueryMethod
+    Order assignCourier(Order order, String courierName);
+
+
+    @QueryMethod
+    Order deliverPackage(Order order, String pickupLocation);
+
+    @QueryMethod
     String getShipmentStatus();
+    @QueryMethod
+    String getCustomerEmail();
 
     @QueryMethod
-    Order startPackaging(long id, String warehouse);
+    Order startPackaging(Order order, @Nullable String warehouse);
 
-    @QueryMethod
-    Order assignCourier(long id, String courierName);
-
-    @QueryMethod
-    Order deliverPackage(long id, String pickupLocation);
 }

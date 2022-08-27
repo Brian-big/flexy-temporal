@@ -12,4 +12,10 @@ public class EmailSender extends MailSimulator {
         return email;
     }
 
+    @Override
+    public void sendMail(String content,String email) {
+        System.out.println("to: "+ email+" content: " +content );
+    }
+
+
 }

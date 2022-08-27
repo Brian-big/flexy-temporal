@@ -1,50 +1,63 @@
 package com.brianbig.flexy.workflow;
 
 import com.brianbig.flexy.domain.orders.Order;
+import com.brianbig.flexy.workflow.order_process.OrderActivity;
+import com.brianbig.flexy.workflow.shipping_process.ShippingActivity;
+import com.brianbig.flexy.workflow.shipping_process.ShippingActivityImpl;
 import io.temporal.activity.ActivityOptions;
 import io.temporal.workflow.Workflow;
 
+import javax.annotation.Nullable;
 import java.time.Duration;
 
 public class OrderWorkflow implements OrderWorkflowInterface{
+
+    String customerEmail = "";
+    String shipmentStatus = "";
 
     ActivityOptions options = ActivityOptions.newBuilder()
             .setScheduleToCloseTimeout(Duration.ofSeconds(60))
             .build();
 
-    private final OrderActivityInterface orderActivity = Workflow.newActivityStub(
-            OrderActivityInterface.class, options
+    private final OrderActivity orderActivity = Workflow.newActivityStub(
+            OrderActivity.class, options
     );
 
+    private final ShippingActivity shippingActivity = Workflow.newActivityStub(
+            ShippingActivity.class, options
+    );
     @Override
     public Order makeOrder(Order order) {
-       return orderActivity.makeOrder(order);
+        System.out.println("Making Order....");
+        Order order_ = orderActivity.makeOrder(order);
+        customerEmail = order_.getCustomer().getEmail();
+        Order packagedOrder = startPackaging(order_, null);
+        shipmentStatus = packagedOrder.getShipmentStatus();
+        return order_;
     }
 
     @Override
-    public Order startPackaging(long id, String warehouse) {
-        Order order = orderActivity.findOrderById(id);
-        orderActivity.startPackaging(order, warehouse);
-
-        return order;
+    public Order startPackaging(Order order, @Nullable String warehouse) {
+        return shippingActivity.startPackaging(order, warehouse);
     }
 
     @Override
-    public Order assignCourier(long id, String courierName) {
-        Order order = orderActivity.findOrderById(id);
-        orderActivity.assignCourier(order, courierName);
-        return order;
+    public Order assignCourier(Order order, String courierName) {
+        return shippingActivity.assignCourier(order, courierName);
     }
 
     @Override
-    public Order deliverPackage(long id, String pickupLocation) {
-        Order order = orderActivity.findOrderById(id);
-        orderActivity.deliverPackage(order, pickupLocation);
-        return null;
+    public Order deliverPackage(Order order, String pickupLocation) {
+        return shippingActivity.deliverPackage(order, pickupLocation);
     }
 
     @Override
     public String getShipmentStatus() {
-        return null;
+        return shipmentStatus;
+    }
+
+    @Override
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 }

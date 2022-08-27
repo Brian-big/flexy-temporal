@@ -12,10 +12,7 @@ abstract public class MailSimulator {
     public void sendMail(String content){
         System.out.println("Sending email to "+ getRecipientAddress() );
         System.out.println(content);
-        try {
-            Thread.sleep(delayTime*1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
+
+    public abstract void sendMail(String content, String email);
 }

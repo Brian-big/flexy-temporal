@@ -34,23 +34,4 @@ public class Controller {
         return service.updateOrder(order);
     }
 
-    @PutMapping("/{id}/package")
-    public Order packageForOrder(@PathVariable long id, @RequestBody String warehouse){
-        Order order_  = service.getOrderById(id);
-        order_.setShipmentStatus("PACKAGING");
-        return service.updateOrder(order_);
-
-    }
-
-    @PutMapping("/{id}/assign-courier")
-    public Order assignCourier(@PathVariable long id, @RequestBody String courierName){
-        return workflow.assignCourier(id, courierName);
-    }
-
-    @PutMapping("/{id}/deliver")
-    public Order deliverPackage(@PathVariable long id, @RequestBody String pickupLocation){
-        return workflow.deliverPackage(id, pickupLocation);
-    }
-
-
 }
