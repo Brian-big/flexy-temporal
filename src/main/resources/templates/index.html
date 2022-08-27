@@ -82,7 +82,29 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button class="btn btn-primary col-md-12" type="submit">Save customer</button>
+                    <button class="btn btn-warning col-md-12" type="submit">Save customer</button>
+                </div>
+            </form>
+
+            <form th:action="@{/add-product/}" method="post" class="row g-3 mt-4 bg-secondary rounded py-2" >
+                <div class="col-md-12 mt-4">
+                    <h4 class="text-white text-center">Add new product</h4>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="input-group ">
+                        <span class="input-group-text">name</span>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group ">
+                        <span class="input-group-text">price</span>
+                        <input type="number" class="form-control" id="price" name="price" required>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-success col-md-12" type="submit">Save</button>
                 </div>
             </form>
                 

@@ -53,4 +53,17 @@ public class WebController {
         restClient.addCustomer(customer);
         return "redirect:/";
     }
+
+    @RequestMapping(value = "/add-product", method = RequestMethod.POST)
+    public String addProduct(
+            @RequestParam("name") String name,
+            @RequestParam("price") double price)
+            {
+        var product = Product.builder()
+                .name(name)
+                .price(price)
+                .build();
+        restClient.addProduct(product);
+        return "redirect:/";
+    }
 }
