@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f78a612-ed3d-428e-903e-83dd0844a957" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/common/FlexyRestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/web_app/WebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/web_app/WebRestClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/ApiHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+    <list default="true" id="4f78a612-ed3d-428e-903e-83dd0844a957" name="Changes" comment="Add web client">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/orders/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/orders/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorkflow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorkflow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/web_app/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/web_app/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/web_app/WebRestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/web_app/WebRestClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +110,14 @@
       <option name="presentableId" value="Default" />
       <updated>1661326202316</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add web client">
+      <created>1661591600577</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661591600577</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +130,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add web client" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add web client" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

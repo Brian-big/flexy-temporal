@@ -6,11 +6,11 @@ import com.brianbig.flexy.domain.products.Product;
 import com.brianbig.flexy.workflow.OrderWorker;
 import com.brianbig.flexy.workflow.OrderWorkflowInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller("WebController")
 public class WebController {
@@ -28,16 +28,29 @@ public class WebController {
     }
 
 
-    @PostMapping("/")
-    public String makeOrder(@RequestParam("customer_id") long customerId,
-                          @RequestParam("product_id") long productId
-                          ){
+    @RequestMapping(value = "/make-order", method = RequestMethod.POST)
+    public String makeOrder(
+            @RequestParam("customer_id") long customerId,
+            @RequestParam("product_id") long productId){
         var order = Order.builder()
                 .customer(Customer.builder().id(customerId).build())
                 .product(Product.builder().id(productId).build())
                 .build();
-        workflow.makeOrder(order);
+        Order order_  = workflow.makeOrder(order);
 
-        return "index";
+        return "redirect:/";
+    }
+    @RequestMapping(value = "/add-customer", method = RequestMethod.POST)
+    public String addCustomer(
+            @RequestParam("email") String email,
+            @RequestParam("telephone") String telephone,
+            @RequestParam("address") String address){
+        var customer = Customer.builder()
+                .email(email)
+                .telephone(telephone)
+                .address(address)
+                .build();
+        restClient.addCustomer(customer);
+        return "redirect:/";
     }
 }
