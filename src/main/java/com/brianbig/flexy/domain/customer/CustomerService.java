@@ -19,7 +19,9 @@ public class CustomerService {
             return customerWithEmail;
         return repository.save(
                 Customer.builder()
+                        .address(customer.getAddress())
                         .email(customer.getEmail())
+                        .telephone(customer.getTelephone())
                         .build()
         );
     }

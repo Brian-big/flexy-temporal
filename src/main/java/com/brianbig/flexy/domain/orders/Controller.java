@@ -22,7 +22,7 @@ public class Controller {
 
     @PostMapping
     public Order makeOrder(@RequestBody Order order){
-        return workflow.makeOrder(order);
+        return service.makeOrder(order);
     }
     @GetMapping("/{id}")
     public Order getOrderById(@PathVariable long id){
@@ -33,9 +33,13 @@ public class Controller {
     public Order update(@RequestBody Order order){
         return service.updateOrder(order);
     }
+
     @PutMapping("/{id}/package")
     public Order packageForOrder(@PathVariable long id, @RequestBody String warehouse){
-        return workflow.startPackaging(id, warehouse);
+        Order order_  = service.getOrderById(id);
+        order_.setShipmentStatus("PACKAGING");
+        return service.updateOrder(order_);
+
     }
 
     @PutMapping("/{id}/assign-courier")

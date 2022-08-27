@@ -18,9 +18,7 @@ public class OrderWorkflow implements OrderWorkflowInterface{
 
     @Override
     public Order makeOrder(Order order) {
-        Order order_ = orderActivity.makeOrder(order);
-        return orderActivity.startPackaging(order_,null);
-
+       return orderActivity.makeOrder(order);
     }
 
     @Override

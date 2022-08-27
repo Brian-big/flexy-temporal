@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f78a612-ed3d-428e-903e-83dd0844a957" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/SpringFoxConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/common/FlexyRestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/web_app/WebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/web_app/WebRestClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/ApiHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/FlexyWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/FlexyWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/customer/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/orders/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/domain/orders/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorkflow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderWorkflow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +30,8 @@
       <list>
         <option value="com.haulmont.jpb.JpaEntity" />
         <option value="com.haulmont.jpb.JpaRepository" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -62,16 +70,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/brian/IdeaProjects/Flexy"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/brian/IdeaProjects/Flexy/src/main/resources&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.brianbig.flexy.web_app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -120,5 +132,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/brianbig/flexy/workflow/OrderActivity.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
