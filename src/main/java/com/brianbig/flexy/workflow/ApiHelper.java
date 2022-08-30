@@ -34,7 +34,7 @@ public class ApiHelper extends FlexyRestClient {
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<Order> orderHttpEntity = new HttpEntity<>(order, headers);
         ResponseEntity<Order> response = restTemplate.exchange(
-                url, HttpMethod.POST, orderHttpEntity, Order.class
+                url, HttpMethod.PUT, orderHttpEntity, Order.class
         );
         return response.getBody();
     }
