@@ -33,6 +33,7 @@ public class OrderWorkflow implements OrderWorkflowInterface{
         customerEmail = order_.getCustomer().getEmail();
         Order packagedOrder = startPackaging(order_, null);
         shipmentStatus = packagedOrder.getShipmentStatus();
+        System.out.println(order_);
         return order_;
     }
 

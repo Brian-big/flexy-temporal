@@ -17,5 +17,4 @@ public class EmailSender extends MailSimulator {
         System.out.println("to: "+ email+" content: " +content );
     }
 
-
 }

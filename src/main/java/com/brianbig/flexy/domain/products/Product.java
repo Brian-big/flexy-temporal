@@ -19,5 +19,5 @@ public class Product {
     @Column
     private String imageUrl;
     @Column
-    private double price = 1.0;
+    private double price;
 }

@@ -3,6 +3,8 @@ package com.brianbig.flexy.workflow;
 import com.brianbig.flexy.common.FlexyRestClient;
 import com.brianbig.flexy.domain.orders.Order;
 import com.brianbig.flexy.domain.orders.OrderService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -16,7 +18,7 @@ public class ApiHelper extends FlexyRestClient {
 
     @Autowired private OrderService orderService;
 
-    public Order makeOrder(Order order){
+    public Order makeOrder(Order order) {
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<Order> orderHttpEntity = new HttpEntity<>(order, headers);
         headers.setContentType(MediaType.APPLICATION_JSON);
